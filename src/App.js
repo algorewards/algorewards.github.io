@@ -30,7 +30,7 @@ function App() {
   const [loaded, setLoaded] = useState(0);
 
   useEffect(() => {
-    fetch("https://governance.algorand.foundation/api/periods/governance-period-1/")
+    fetch("https://governance.algorand.foundation/api/periods/governance-period-2/")
     .then(response => response.json())
     .then(response => {
       setLoaded(true);
@@ -47,7 +47,7 @@ function App() {
       
       <Calculator loaded={loaded} data={data}/>
 
-      <TitleDiv titleText="Governance Period #1 Statistics"/>
+      <TitleDiv titleText="Governance Period #2 Statistics"/>
 
       <div className="App-section App-container">
         <div className="App-half App-half-left App-center">

@@ -27,7 +27,7 @@ export function Calculator(props) {
 
   return (
     <div>
-      <TitleDiv titleText="Governance Period #1 Calculator"/>
+      <TitleDiv titleText="Governance Period #2 Calculator"/>
       <div className="App-center App-section">
           <label>
               Algos Commited:
@@ -45,16 +45,16 @@ export function Calculator(props) {
         </div>
         
         <div className="App-half App-half-left App-center">
-          <StatisticDiv heading="Period #1 Governance APY%" value= {props.loaded ? calculateNonCAPY(props.data.start_datetime, props.data.end_datetime , props.data.total_committed_stake/1000000, parseFloat(props.data.algo_amount_in_reward_pool)/1000000) : "..loading"}/>
+          <StatisticDiv heading="Period #2 Governance APY%" value= {props.loaded ? calculateNonCAPY(props.data.start_datetime, props.data.end_datetime , props.data.total_committed_stake/1000000, parseFloat(props.data.algo_amount_in_reward_pool)/1000000) : "..loading"}/>
         </div>
         <div className="App-half App-center">
           <StatisticDiv heading="Regular Staking Rewards" value={props.loaded ?  stakingReward(props.data.start_datetime, props.data.end_datetime, field) : "..loading"}/>
         </div>
         <div className="App-half App-half-left App-center">
-          <StatisticDiv heading="Total Period #1 Reward" value= {props.loaded ? calculateReward(field, props.data.total_committed_stake/1000000, parseFloat(props.data.algo_amount_in_reward_pool)/1000000) +  stakingReward(props.data.start_datetime, props.data.end_datetime, field): "..loading"}/>
+          <StatisticDiv heading="Total Period #2 Reward" value= {props.loaded ? calculateReward(field, props.data.total_committed_stake/1000000, parseFloat(props.data.algo_amount_in_reward_pool)/1000000) +  stakingReward(props.data.start_datetime, props.data.end_datetime, field): "..loading"}/>
         </div>
         <div className="App-half App-center">
-          <StatisticDiv heading="Total Algo After Period #1" value={props.loaded ?  calculateReward(field, props.data.total_committed_stake/1000000, parseFloat(props.data.algo_amount_in_reward_pool)/1000000) +  stakingReward(props.data.start_datetime, props.data.end_datetime, field) + parseFloat(field): "..loading"}/>
+          <StatisticDiv heading="Total Algo After Period #2" value={props.loaded ?  calculateReward(field, props.data.total_committed_stake/1000000, parseFloat(props.data.algo_amount_in_reward_pool)/1000000) +  stakingReward(props.data.start_datetime, props.data.end_datetime, field) + parseFloat(field): "..loading"}/>
         </div>
 
       </div>
