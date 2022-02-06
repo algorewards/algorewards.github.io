@@ -22,7 +22,7 @@ export function Calculator(props) {
     return ((calculateReward(1, totalStake, rewards) / GovDuration)*100);
   }
   const stakingReward = (startTime, endTime, totalStake) =>  {
-    return (getDuration(startTime, endTime) * 3.17098e-11 * 0.048 * totalStake);
+    return (getDuration(startTime, endTime) * 3.17098e-11 * 0.0065 * totalStake);
   }
 
   return (
